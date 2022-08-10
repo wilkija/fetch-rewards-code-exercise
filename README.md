@@ -5,7 +5,7 @@ This is a simple web service built using Node.js, a back end JavaScript runtime 
 * Express | https://expressjs.com/
     * Nodejs back end web app framework that aids API construction
 * Chai | https://www.chaijs.com/
-    * A BDD / TDD assertion library for node and the browser, used for unit testing
+    * A Behavior-Driven Development (BDD) / Test-Driven Development (TDD) assertion library for node and the browser, used for unit testing
 * Chai-HTTP | https://www.chaijs.com/plugins/chai-http/
     * Plugin that allows HTTP integration testing with Chai assertions
 * Mocha | https://mochajs.org/
@@ -92,7 +92,7 @@ This is a simple web service built using Node.js, a back end JavaScript runtime 
 
 >## GET route - Observe the cumulative point balances per payer
 
-* The `/balance` route allows us to keep an eye on payers' point totals after a series of transactions and user expenditures. Change the request dropdown to `GET`. No data is sent with the request. ]
+* The `/balance` route allows us to keep an eye on payers' point totals after a series of transactions and user expenditures. Change the request dropdown to `GET`. No data is sent with the request.
 
 ![New Postman Request Page](/assets/images/screen-6.jpg)
 

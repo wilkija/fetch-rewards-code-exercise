@@ -7,7 +7,6 @@ let pointTotal = 0;
 let payerBalances = {};
 // Global variable that stores a list of objects that represents those sent to the 'add' route
 let transactionHistory = [];
-// let spendQueue = [];
 
 // Route below was used during development to view above global variables
 router.route('/').get((req, res) => {
@@ -132,8 +131,8 @@ router.route('/spend').post((req, res) => {
     ///// We are not concerned about the payer of the transactions, so long as the balances are deducted in order by timestamp
     while (remainder > 0) {
         // Store the current transaction as payer and point variables for ease of use
-        let currentPayer = transactionHistory[index]['payer']
-        let currentPoints = transactionHistory[index]['points']
+        let currentPayer = transactionHistory[index]['payer'];
+        let currentPoints = transactionHistory[index]['points'];
 
         // Compare the remainder of points to be deducted to the current payer transaction
         //// When the remainder is equal to the current transaction, do the following
@@ -149,7 +148,7 @@ router.route('/spend').post((req, res) => {
             // Set the remainder to zero and add its index to the list to be removed from transactionHistory
             //// This will cause the while loop to end
             remainder = 0;
-            deductedArray.push(index)
+            deductedArray.push(index);
 
         // When the current transaction has more points than the amount to be deducted, do the following
         } else if (currentPoints > remainder) {
